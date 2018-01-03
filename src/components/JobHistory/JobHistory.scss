@@ -1,0 +1,66 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.job-history {
+  padding: 60px 30px;
+  background-color: $dark-violet;
+  border-bottom: 1px solid $light-gray;
+}
+
+.job-history__content {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+.job-history__timeline {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+
+  @media all and (min-width: $mobile) {
+    flex-wrap: nowrap;
+    width: auto;
+  }
+
+  &:before {
+    @media all and (min-width: $mobile) {
+      content: " ";
+      border-top: solid 2px $snow;
+      position: absolute;
+      bottom: 140px;
+      left: 35px;
+      right: 0;
+      width: calc(100% - 70px);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px solid $snow;
+    transform: translate(-50%);
+    @media all and (min-width: $mobile) {
+      border-left: none;
+    }
+  }
+}
+
+.job-history__title {
+  color: $snow;
+  font-size: 40px;
+  font-weight: 200;
+  text-align: center;
+  margin: 0 0 20px 0;
+
+  @media all and (min-width: $mobile) {
+    margin: 0 0 60px 0;
+  }
+}

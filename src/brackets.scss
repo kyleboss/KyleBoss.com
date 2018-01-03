@@ -1,0 +1,56 @@
+@import 'colors';
+@import 'breakpoints';
+
+.bracket {
+  position: relative;
+  text-align: center;
+  color: #999;
+  font-size: 1.2em;
+  width: 100%;
+  @media all and (min-width: $mobile) {
+    width: 200px;
+  }
+}
+
+.bracket .bracket-text {
+  position: relative;
+  display: inline-block;
+  padding: 1em;
+  width: 50%;
+
+  @media all and (min-width: $mobile) {
+    width: 80%;
+    padding: 0.5em;
+  }
+
+  @media all and (min-width: $tablet) {
+    padding: 1em;
+  }
+}
+
+.bracket .bracket-text:before {/*left bracket*/
+  transition: all .5s ease;
+  content: " ";
+  border: solid 3px $dark-violet;
+  border-right: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: .4em;
+  right: 0;
+  opacity: .25;
+}
+
+.bracket .bracket-text:after {/*right bracket*/
+  transition: all .5s ease;
+  content: " ";
+  border: solid 3px $dark-violet;
+  border-left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: .4em;
+  opacity: .25;
+}

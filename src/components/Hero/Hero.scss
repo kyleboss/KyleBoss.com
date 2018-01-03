@@ -1,0 +1,120 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.hero {
+  position: relative;
+}
+
+.hero__background {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  @media all and (min-width: $tablet) {
+    height: 500px;
+    background: url('https://s3-us-west-2.amazonaws.com/kyleboss.com/hero-profile.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, $strong-violet, rgba(100, 0, 100, .8));
+    opacity: 1;
+  }
+}
+
+.hero__resume-button {
+  padding: 10px 0;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  border-radius: 50px;
+  font-size: 15px;
+  color: $snow;
+  display: inline-block;
+  text-decoration: none;
+  transition: all .5s ease;
+  text-align: center;
+  background: linear-gradient(to bottom right, $pure-orange, $orange-red);
+  border: 2px solid $strong-violet;
+  letter-spacing: 1px;
+
+  @media all and (min-width: $mobile) {
+    font-size: 20px;
+    top: 15px;
+    right: 15px;
+    left: inherit;
+    width: inherit;
+    padding: 10px 25px;
+  }
+
+  @media all and (min-width: $tablet) {
+    top: 30px;
+    right: 30px;
+  }
+
+  &:hover {
+    border: 2px solid $dark-violet;
+    background: none;
+  }
+}
+
+.hero__main-text-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+
+  @media all and (min-width: $mobile) {
+    margin: inherit;
+    justify-content: center;
+  }
+
+  @media all and (min-width: $tablet) {
+    padding: 20px 50px;
+    text-align: left;
+    max-width: 500px;
+  }
+}
+
+.hero__main-text {
+  font-weight: 200;
+  color: $white;
+  opacity: .9;
+  font-size: 60px;
+  display: none;
+
+  @media all and (min-width: $tablet) {
+    font-size: 100px;
+    display: block;
+  }
+}
+
+.hero__main-text--emphasized {
+  font-weight: 700;
+  color: $pure-orange;
+  display: block;
+}
+
+.hero__main-text--subtitle {
+  margin: 20px 0 0 0;
+  padding: 20px 10px;
+  border-top: 1px solid $strong-violet;
+  font-size: 20px;
+  font-style: italic;
+  display: block;
+}

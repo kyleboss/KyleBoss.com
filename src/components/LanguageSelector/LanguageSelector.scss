@@ -1,0 +1,50 @@
+@import '../../colors';
+@import '../../breakpoints';
+@import '../../brackets';
+
+.language-selector {
+  margin: 25px 0;
+  color: $dark-gray;
+  transition: all .5s ease;
+  cursor: default;
+
+  @media all and (min-width: $mobile) {
+    opacity: 0.75;
+    width: 160px;
+  }
+
+  @media all and (min-width: $tablet) {
+    width: 200px;
+  }
+}
+
+.language-selector__name {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+
+  @media all and (min-width: $mobile) {
+    font-size: 20px;
+  }
+
+  @media all and (min-width: $tablet) {
+    font-size: 30px;
+  }
+}
+
+.language-selector__fluency {
+  font-size: 15px;
+  font-weight: 200;
+  @media all and (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.language-selector--active {
+  opacity: 1;
+}
+
+.language-selector:hover.bracket .bracket-text:before,
+.language-selector:hover.bracket .bracket-text:after {
+  opacity: 1;
+}

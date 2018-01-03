@@ -1,0 +1,55 @@
+@import '../../colors';
+@import '../../breakpoints';
+@import '../../brackets';
+
+.software-skill {
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-width: 150px;
+  align-items: center;
+  text-decoration: none;
+
+  @media all and (min-width: $mobile) {
+    align-items: inherit;
+  }
+
+  @media all and (min-width: $tablet) {
+    padding: 0 20px;
+  }
+}
+
+.software-skill:hover .software-skill__logo {
+  filter: hue-rotate(0deg);
+}
+
+.software-skill:hover.bracket .bracket-text:before,
+.software-skill:hover.bracket .bracket-text:after {
+  opacity: 1;
+}
+
+.software-skill__logo {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 10px auto;
+  transition: all .5s ease;
+}
+
+.software-skill__logo--ruby {
+  filter: hue-rotate(-50deg);
+}
+
+.software-skill__logo--react {
+  filter: hue-rotate(110deg);
+}
+
+.software-skill__logo--android {
+  filter: hue-rotate(-180deg);
+}
+
+.software-skill__skill-name {
+  color: $dark-violet;
+  font-size: 18px;
+}

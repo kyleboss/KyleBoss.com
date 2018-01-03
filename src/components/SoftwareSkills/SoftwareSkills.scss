@@ -1,0 +1,21 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.software-skills {
+  padding: 60px 30px;
+  background-color: $snow;
+  border-bottom: 1px solid $light-gray;
+}
+
+.software-skills__content {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media all and (min-width: $mobile) {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.software-skills-header {
+  text-align: center;
+  width: 100%;
+}
+
+.software-skills-header__title {
+  font-size: 35px;
+  color: $dark-gray;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.software-skills-header__subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  font-weight: 200;
+  color: $medium-gray;
+  letter-spacing: 0.05em;
+  line-height: 1.25em;
+  display: none;
+
+  @media all and (min-width: $mobile) {
+    display: block;
+  }
+}

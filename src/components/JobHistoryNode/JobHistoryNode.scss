@@ -1,0 +1,141 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.job-history-node {
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 115px;
+
+  @media all and (min-width: $mobile) {
+    flex-direction: column;
+    margin: inherit;
+    height: 250px;
+  }
+}
+
+.job-history-node__hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: $dark-violet;
+  margin: 28.87px auto;
+  border-left: solid 2px $snow;
+  border-right: solid 2px $snow;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $snow;
+  }
+}
+
+.job-history-node__hexagon:before,
+.job-history-node__hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 12.6447px;
+}
+
+.job-history-node__hexagon:before {
+  top: -35.3553px;
+  border-top: solid 2.8284px $snow;
+  border-right: solid 2.8284px $snow;
+}
+
+.job-history-node__hexagon:after {
+  bottom: -35.3553px;
+  border-bottom: solid 2.8284px $snow;
+  border-left: solid 2.8284px $snow;
+}
+
+.job-history-node__hexagon-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 35px);
+  color: white;
+  z-index: 2;
+}
+
+.job-history-node__hexagon,
+.job-history-node__hexagon:before,
+.job-history-node__hexagon:after {
+  box-sizing: border-box;
+}
+
+.job-history-node__bottom-portion {
+  position: absolute;
+  margin: auto;
+  left: 250px;
+  text-align: left;
+  color: $snow;
+  width: 33%;
+
+  @media all and (min-width: $mobile) {
+    text-align: center;
+    position: relative;
+    top: inherit;
+    left: inherit;
+    height: 40px;
+    width: auto;
+  }
+}
+
+.job-history-node__company-name {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.job-history-node__top-portion {
+  text-align: right;
+  color: $pure-orange;
+  width: calc(33% - 20px);
+
+  @media all and (min-width: $mobile) {
+    text-align: center;
+    position: relative;
+    top: inherit;
+    bottom: inherit;
+    right: inherit;
+    width: auto;
+    height: 50px;
+  }
+}
+
+.job-history-node__former-name,
+.job-history-node__time-period {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.job-history-node__job-title {
+  font-weight: 200;
+}
+
+.job-history-node--link {
+  display: inline-block;
+  width: 33%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  @media all and (min-width: $mobile) {
+    width: auto;
+    position: inherit;
+    left: inherit;
+    right: inherit;
+    margin: inherit;
+  }
+}

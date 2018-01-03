@@ -1,0 +1,19 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.power-statement {
+  width: 100%;
+  background-color: $snow;
+  font-style: italic;
+  font-size: 18px;
+  border-bottom: 1px solid $light-gray;
+  color: $dark-violet;
+}
+
+.power-statement__text {
+  max-width: 800px;
+  margin: auto;
+  line-height: 30px;
+  padding: 20px;
+  text-align: center;
+}

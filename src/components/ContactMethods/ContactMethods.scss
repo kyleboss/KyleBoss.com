@@ -1,0 +1,28 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.hero__contact-methods {
+  position: absolute;
+  z-index: 1;
+  padding: 20px;
+  font-style: italic;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media all and (min-width: $mobile) {
+    width: 340px;
+  }
+
+  @media all and (min-width: $tablet) {
+    justify-content: flex-start;
+    max-width: 500px;
+    right: inherit;
+    width: inherit;
+    display: flex;
+    padding: 20px 20px 20px 60px;
+  }
+}

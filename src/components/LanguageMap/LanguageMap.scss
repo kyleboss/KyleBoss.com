@@ -1,0 +1,35 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.language-map {
+  text-align: right;
+  opacity: 0;
+  display: flex;
+  transition: all .5s ease;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
+  &:last-of-type {
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+.language-map--active {
+  opacity: 1;
+}
+
+.language-map__img {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+}

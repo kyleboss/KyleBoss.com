@@ -1,0 +1,31 @@
+$desktop: 1024px;
+$tablet: 839px;
+$mobile: 480px;
+
+.mobile-only {
+  display: none;
+  @media all and (min-width: 0) and (max-width: $mobile - 1px) {
+    display: block;
+  }
+}
+
+.tablet-and-desktop-only {
+  display: none;
+  @media all and (min-width: $mobile) {
+    display: block;
+  }
+}
+
+.tablet-only {
+  display: none;
+  @media all and (min-width: $mobile) and (max-width: $tablet - 1px) {
+    display: block;
+  }
+}
+
+.desktop-only {
+  display: none;
+  @media all and (min-width: $tablet) {
+    display: block;
+  }
+}

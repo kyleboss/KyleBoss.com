@@ -1,0 +1,70 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.education {
+  padding: 60px 30px;
+  background-color: $cool-black;
+  border-bottom: 1px solid $light-gray;
+  color: $snow;
+}
+
+.education__content {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+.education__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 25px 0;
+
+  @media all and (min-width: $mobile) {
+    flex-direction: row;
+    margin: inherit;
+  }
+}
+
+.education__title {
+  font-size: 40px;
+  font-weight: 200;
+  text-align: center;
+  margin: 0 0 40px 0;
+
+  @media all and (min-width: $mobile) {
+    margin: 0 0 60px 0;
+  }
+}
+
+.education__descriptors {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px 0 0 0;
+
+  @media all and (min-width: $mobile) {
+    padding: 0 0 0 30px;
+    text-align: inherit;
+  }
+}
+
+.education__logo-img {
+  max-width: 150px;
+  max-height: 100%;
+}
+
+.education__name {
+  font-size: 35px;
+}
+
+.education__date {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.education__institution {
+  margin: 0 0 20px 0;
+}

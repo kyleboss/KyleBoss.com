@@ -1,0 +1,1 @@
+This project holds the code for my resume/portfolio. You can find it at http://kyleboss.com

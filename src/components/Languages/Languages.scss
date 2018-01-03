@@ -1,0 +1,55 @@
+@import '../../colors';
+@import '../../breakpoints';
+
+.languages {
+  padding: 60px 30px;
+  background-color: $snow;
+  border-bottom: 1px solid $light-gray;
+}
+
+.languages__content {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+.languages__title {
+  color: $dark-gray;
+  font-size: 40px;
+  font-weight: 200;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.languages__interactive-box {
+  display: flex;
+  justify-content: center;
+}
+
+.languages__selectors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $mobile) {
+    width: inherit;
+    cursor: default;
+  }
+}
+
+.languages__maps {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  display: none;
+
+  @media all and (min-width: $mobile) {
+    display: block;
+    padding: 0 0 0 25px;
+  }
+
+  @media all and (min-width: $tablet) {
+    display: block;
+    padding: 0 0 0 50px;
+  }
+}
