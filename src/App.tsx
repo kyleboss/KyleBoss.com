@@ -17,8 +17,8 @@ class App extends Component {
       <div className="App">
         {process.env.NODE_ENV === 'production' && <Heap appId="113684961"/>}
         {process.env.NODE_ENV === 'development' && <Heap appId="3493464632"/>}
-        <Hero />
-        <PowerStatement />
+        <Hero/>
+        <PowerStatement/>
         <SoftwareSkills/>
         <JobHistory/>
         <Languages/>
