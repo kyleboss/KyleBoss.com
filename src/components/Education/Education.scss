@@ -2,7 +2,7 @@
 @import '../../breakpoints.scss';
 
 .education {
-  padding: 60px 30px;
+  padding: 40px 30px;
   background-color: $cool-black;
   border-bottom: 1px solid $light-gray;
   color: $snow;
@@ -34,7 +34,7 @@
   margin: 0 0 40px 0;
 
   @media all and (min-width: $mobile) {
-    margin: 0 0 60px 0;
+    margin: 0 0 40px 0;
   }
 }
 
