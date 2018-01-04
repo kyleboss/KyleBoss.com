@@ -6,9 +6,6 @@
 # computed styles
 *.css*
 
-# computed scripts
-*.jsx*
-
 # testing
 /coverage
 
