@@ -77,10 +77,10 @@
 .job-history-node__bottom-portion {
   position: absolute;
   margin: auto;
-  left: 250px;
+  left: 220px;
   text-align: left;
   color: $snow;
-  width: 33%;
+  width: calc(33% - 20px);
 
   @media all and (min-width: $mobile) {
     text-align: center;

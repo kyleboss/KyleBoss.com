@@ -15,5 +15,9 @@
   margin: auto;
   line-height: 30px;
   padding: 20px;
-  text-align: center;
+  text-align: justify;
+
+  @media all and (min-width: $mobile) {
+    text-align: center;
+  }
 }

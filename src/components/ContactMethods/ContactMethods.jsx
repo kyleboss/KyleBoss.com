@@ -18,12 +18,28 @@ var ContactMethods = /** @class */ (function (_super) {
     function ContactMethods() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    ContactMethods.prototype.contactMethodObjects = function () {
+        return ([
+            { iconName: 'github', textValue: 'kyleboss', contactUrl: 'http://github.com/kyleboss' },
+            { iconName: 'twitter', textValue: '@likeakyleboss', contactUrl: 'https://twitter.com/likeakyleboss' },
+            { iconName: 'linkedin', textValue: 'kyleboss', contactUrl: 'https://linkedin.com/in/kyleboss' },
+            { iconName: 'email', textValue: 'kyle@kyleboss.com', contactUrl: 'mailto:kyle@kyleboss.com' }
+        ]);
+    };
+    ContactMethods.prototype.contactMethods = function (index) {
+        var object = this.contactMethodObjects()[index];
+        return (<ContactMethod_1.default iconName={object.iconName} textValue={object.textValue} contactUrl={object.contactUrl}/>);
+    };
     ContactMethods.prototype.render = function () {
         return (<div className='hero__contact-methods'>
-                <ContactMethod_1.default iconName='github' textValue='kyleboss' contactUrl='http://github.com/kyleboss'/>
-                <ContactMethod_1.default iconName='linkedin' textValue='kyleboss' contactUrl='https://linkedin.com/in/kyleboss'/>
-                <ContactMethod_1.default iconName='twitter' textValue='@likeakyleboss' contactUrl='https://twitter.com/likeakyleboss'/>
-                <ContactMethod_1.default iconName='email' textValue='kyle@kyleboss.com' contactUrl='mailto:kyle@kyleboss.com'/>
+                <div className='hero__contact-methods-row'>
+                    {this.contactMethods(0)}
+                    {this.contactMethods(1)}
+                </div>
+                <div className='hero__contact-methods-row'>
+                    {this.contactMethods(2)}
+                    {this.contactMethods(3)}
+                </div>
             </div>);
     };
     return ContactMethods;
