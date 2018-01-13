@@ -19,7 +19,7 @@ var Hero = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Hero.prototype.resumeButton = function () {
-        return (<a className='hero__resume-button' href="https://s3-us-west-2.amazonaws.com/kyleboss.com/Resume.png">
+        return (<a className='hero__resume-button' href="https://s3-us-west-2.amazonaws.com/kyleboss.com/KyleBossResume.pdf">
             Résumé
         </a>);
     };

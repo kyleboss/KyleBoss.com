@@ -12,7 +12,10 @@ interface IHeroState {
 
 export default class Hero extends React.Component<IHeroProps, IHeroState> {
     public resumeButton() {
-        return(<a className='hero__resume-button' href="https://s3-us-west-2.amazonaws.com/kyleboss.com/Resume.png">
+        return(<a
+            className='hero__resume-button'
+            href="https://s3-us-west-2.amazonaws.com/kyleboss.com/KyleBossResume.pdf"
+        >
             Résumé
         </a>)
     }
