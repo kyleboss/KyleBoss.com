@@ -24,12 +24,12 @@ var JobHistory = /** @class */ (function (_super) {
                 companyUrl: 'http://www.osisoft.com' },
             { company: 'Spokeo', startDate: 'May 2014', endDate: 'Aug 2014', jobTitle: 'SWE Intern', formerly: null,
                 companyUrl: 'http://www.spokeo.com' },
-            { company: 'Adobe', startDate: 'May 2015', endDate: 'Aug 2015', jobTitle: 'SWE Intern',
+            { company: 'Adobe', startDate: 'May 2015', endDate: 'Dec 2015', jobTitle: 'SWE Intern',
                 formerly: 'Tubemogul', companyUrl: 'http://www.tubemogul.com' },
-            { company: 'Adobe', startDate: 'Aug 2015', endDate: 'Dec 2015', jobTitle: 'Software Engineer',
-                formerly: 'Tubemogul', companyUrl: 'http://www.tubemogul.com' },
-            { company: 'Spokeo', startDate: 'May 2016', endDate: 'Present', jobTitle: 'Software Engineer',
-                formerly: null, companyUrl: 'http://www.spokeo.com' }
+            { company: 'Spokeo', startDate: 'May 2016', endDate: 'Mar 2018', jobTitle: 'Software Engineer',
+                formerly: null, companyUrl: 'http://www.spokeo.com' },
+            { company: 'JOANY', startDate: 'Mar 2018', endDate: 'Jul 2018', jobTitle: 'Software Engineer',
+                formerly: null, companyUrl: 'http://www.joany.com' },
         ];
     };
     JobHistory.prototype.jobHistoryNodes = function () {
