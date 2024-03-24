@@ -9,8 +9,12 @@ import styles from "./page.module.css";
 
 export default function Home() {
   useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_FULLSTORY_ORG_ID) {
+      return;
+    }
+
     FullStory.init({
-      orgId: process.env.NEXT_PUBLIC_FULLSTORY_ORG_ID ?? "",
+      orgId: process.env.NEXT_PUBLIC_FULLSTORY_ORG_ID,
       devMode: process.env.NODE_ENV === "development",
     });
   }, []);
