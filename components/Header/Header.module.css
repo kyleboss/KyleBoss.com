@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8rem;
+  gap: 3rem;
+}
+
+@media (max-width: 960px) {
+  .container {
+    flex-direction: column;
+  }
+}
