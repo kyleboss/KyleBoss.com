@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -22,6 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <Analytics />
+      {process.env.NEXT_PUBLIC_GTM_ID ? (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+      ) : null}
       <body className={inter.className}>{children}</body>
     </html>
   );
