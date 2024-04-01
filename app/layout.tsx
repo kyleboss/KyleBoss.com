@@ -23,12 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="/fullstory.js" />
-      <SpeedInsights />
-      <Analytics />
       {process.env.NEXT_PUBLIC_GTM_ID ? (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       ) : null}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }
