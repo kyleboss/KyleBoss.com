@@ -11,7 +11,6 @@ const Cards = () => {
           key={card.title}
           title={card.title}
           subtitle={card.subtitle}
-          image={card.image}
           url={card.url}
         />
       ))}

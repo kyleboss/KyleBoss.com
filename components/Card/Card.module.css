@@ -30,15 +30,6 @@
   transform: scale3d(1.02, 1.02, 1);
 }
 
-.imageContainer {
-  flex-grow: 1;
-  display: flex;
-  /* justify-content: center; */
-  align-items: flex-end;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
 @media (max-width: 960px) {
   .card {
     height: auto;
