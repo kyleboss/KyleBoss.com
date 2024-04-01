@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script src="/fullstory.js" />
       <SpeedInsights />
       <Analytics />
       {process.env.NEXT_PUBLIC_GTM_ID ? (
